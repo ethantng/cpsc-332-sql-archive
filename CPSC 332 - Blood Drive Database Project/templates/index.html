@@ -1,0 +1,37 @@
+<!--
+=========================================================
+Attached: Database Project
+=========================================================
+Program: index.html
+=========================================================
+Programmers: Ethan Nguyen, Gala Ferdaous, Angel Orduna
+Class: CPSC 332-02 17257
+=========================================================
+Description: This program will act as the main webpage
+or dashboard.
+=========================================================
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blood Donation Manager</title> <!-- title -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1> Blood Donation Manager</h1>
+        <div class="stats"> <!-- system stats -->
+            <p><strong>Total Donors:</strong> {{ donors }}</p>
+            <p><strong>Total Donations:</strong> {{ donations }}</p>
+            <p><strong>Total Requests:</strong> {{ requests }}</p>
+        </div>
+        <nav>
+            <a href="/add_donor"> Add Donor</a> <!-- link to donor registration -->
+            <a href="/record_donation"> Record Donation</a> <!-- link to log a donation -->
+            <a href="/make_request"> Make Request</a>  <!-- link to create a request -->
+            <a href="/search"> Search Donors</a>  <!-- link to search donors -->
+        </nav>
+    </div>
+</body>
+</html>
